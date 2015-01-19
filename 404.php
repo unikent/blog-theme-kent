@@ -1,30 +1,13 @@
-<?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
+<?php get_template_part('templates/page', 'header'); ?>
 
-get_header(); ?>
+<div class="alert alert-warning">
+  <?php _e('Sorry, but the page you were trying to view does not exist.', 'roots'); ?>
+</div>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<p><?php _e('It looks like this was the result of either:', 'roots'); ?></p>
+<ul>
+  <li><?php _e('a mistyped address', 'roots'); ?></li>
+  <li><?php _e('an out-of-date link', 'roots'); ?></li>
+</ul>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyfifteen' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfifteen' ); ?></p>
-
-					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
-
-<?php get_footer(); ?>
+<?php get_search_form(); ?>
