@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="alternate" type="application/rss+xml" title="<?php echo get_bloginfo('name'); ?> Feed" href="<?php echo esc_url(get_feed_link()); ?>">
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href="//static.kent.ac.uk/pantheon/static/webfonts/kentfont/css/kentfont.css" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <?php wp_head(); ?>
 </head>

@@ -33,6 +33,10 @@ function roots_setup() {
 
   // Tell the TinyMCE editor to use a custom stylesheet
   add_editor_style('/assets/css/editor-style.css');
+
+  //add blog header image size
+  add_image_size( 'blog_header', 1920, 99999, false );
+
 }
 add_action('after_setup_theme', 'roots_setup');
 

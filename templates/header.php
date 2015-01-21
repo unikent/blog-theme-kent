@@ -13,7 +13,7 @@
   <?php
   }
   ?>
-  <div class="container">
+  <div class="container blog-header">
     <div class="row">
       <a class="blog-title" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
       <span class="blog-description"><?php bloginfo ( 'description' ); ?></span>
@@ -28,13 +28,23 @@
         <span class="icon-bar"></span>
       </button>
     </div>
-
-    <nav class="collapse navbar-collapse" role="navigation">
+    <div class="collapse navbar-collapse">
+    <nav class="navbar-left" role="navigation">
       <?php
       if (has_nav_menu('primary_navigation')) :
         wp_nav_menu(array('theme_location' => 'primary_navigation', 'walker' => new Roots_Nav_Walker(), 'menu_class' => 'nav navbar-nav'));
       endif;
       ?>
     </nav>
+    <form role="search" method="get" class="navbar-form navbar-right search-form form-inline" action="<?php echo esc_url(home_url('/')); ?>">
+      <label class="sr-only"><?php _e('Search for:', 'roots'); ?></label>
+      <div class="input-group">
+        <input type="search" value="<?php echo get_search_query(); ?>" name="s" class="search-field form-control" placeholder="<?php _e('Search', 'roots'); ?> <?php bloginfo('name'); ?>" required>
+    <span class="input-group-btn">
+      <button type="submit" class="search-submit btn btn-default"><span class="sr-only"><?php _e('Search', 'roots'); ?></span><i class="kf-search"></i></button>
+    </span>
+      </div>
+    </form>
+    </div>
   </div>
 </header>
