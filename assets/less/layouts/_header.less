@@ -1,1 +1,47 @@
-.banner { }
+.banner {
+  .blog-header-img{
+    max-height: 400px;
+    overflow: hidden;
+    img{
+      .img-responsive;
+    }
+  }
+  .blog-title{
+    float: left;
+    background-color: @brand-primary;
+    padding: 30px;
+    .h1;
+    display: inline-block;
+    width: 100%;
+    color:#fff;
+    text-transform: uppercase;
+
+    &:hover,&:active,&:focus{
+      color: #fff;
+      text-decoration: none;
+      outline: none;
+    }
+    @media (min-width: @screen-md-min) {
+      width: 60%;
+    }
+    @media (min-width: @screen-lg-min) {
+      width: 40%;
+    }
+  }
+  .blog-description{
+    float: left;
+    padding: 15px;
+    color: @brand-primary;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+
+    @media (min-width: @screen-md-min) {
+      width: 40%;
+    }
+    @media (min-width: @screen-lg-min) {
+      width: 60%;
+    }
+  }
+}

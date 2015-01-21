@@ -49,8 +49,7 @@ function roots_display_sidebar() {
        * The second element must be an array even if there's only 1 argument.
        */
       array(
-        'is_404',
-        'is_front_page'
+        'is_404'
       ),
       /**
        * Page template checks (via is_page_template())
@@ -74,3 +73,20 @@ function roots_display_sidebar() {
  * Default: 1140px is the default Bootstrap container width.
  */
 if (!isset($content_width)) { $content_width = 1140; }
+
+
+function kentblogs_register_theme_customizer( $wp_customize ) {
+    $wp_customize->add_setting( 'theme_header_bg' );
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,'theme_header_bg',array(
+                'label' => 'Header Background Image',
+                'section' => 'title_tagline',
+                'settings' => 'theme_header_bg',
+                'priority' => 2
+            )
+        )
+    );
+}
+add_action( 'customize_register', 'kentblogs_register_theme_customizer' );
+
