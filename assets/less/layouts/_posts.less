@@ -1,5 +1,63 @@
 .hentry header { }
 .hentry time { }
-.hentry .byline { }
+.hentry .byline {
+  .avatar{
+    display: inline-block;
+    border-radius: 50px;
+    margin-right: 24px;
+  }
+  a{
+    border-bottom: none;
+    &:hover{
+      border-bottom: none;
+    }
+  }
+}
 .hentry .entry-content { }
 .hentry footer { }
+
+
+.latest-post{
+  .make-sm-column(6,30px);
+  .make-lg-column(4,30px);
+
+  margin-bottom: 24px;
+
+  .latest-post-img{
+    height: 233px;
+    overflow:hidden;
+    img{
+      width: 100%;
+    }
+  }
+  .entry-title{
+    font-family: @font-family-sans-serif;
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+  .byline{
+    font-size: 14px;
+  }
+  .blog-source{
+    text-transform: uppercase;
+    color: @text-color;
+    border-bottom: none;
+    &:hover{
+      color: @text-color;
+      border-bottom: none;
+    }
+  }
+  @media (min-width: @screen-sm-min) {
+    &:nth-child(odd){
+      clear:left;
+    }
+  }
+  @media (min-width: @screen-lg-min) {
+    &:nth-child(odd){
+      clear:none;
+    }
+    &:nth-child(3n+1){
+      clear:left;
+    }
+  }
+}

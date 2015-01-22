@@ -1,9 +1,9 @@
 .banner {
-  margin-top: 24px;
+  //margin-top: 24px;
 
   .blog-header-img {
     display: block;
-    height: 168px;
+    height: 192px;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -19,30 +19,26 @@
       }
     }
     @media (min-width: @screen-md-min) {
-      height: 192px;
+      height: 240px;
       img {
         max-width: 100%;
         margin-left: 0;
       }
     }
     @media (min-width: @screen-lg-min) {
-      height: 216px;
+      height: 264px;
     }
   }
 
   .blog-header {
 
     position: relative;
-    margin-right: 24px;
     margin-top: -60px;
-    @media (min-width: @screen-sm-min) {
-      margin-right: auto;
-    }
 
     .blog-title {
       float: left;
       background-color: @brand-primary;
-      padding: 30px;
+      padding: 30px 80px 30px 30px;
       font-family: @headings-font-family;
       margin: 0;
       display: inline-block;
@@ -58,32 +54,63 @@
         outline: none;
       }
 
-      @media (min-width: 475px) {
-        width: 80%;
-      }
       @media (min-width: @screen-sm-min) {
-        width: 66%;
+        padding: 30px;
         font-size: @font-size-h2;
       }
       @media (min-width: @screen-md-min) {
-        width: 50%;
         font-size: @font-size-h1;
+      }
+    }
+
+    .blog-title-wrap{
+      position: relative;
+      overflow: hidden;
+      float:left;
+      width: 100%;
+
+      @media (min-width: @screen-sm-min) {
+        width: 66%;
+      }
+      @media (min-width: @screen-md-min) {
+        width: 50%;
       }
       @media (min-width: @screen-lg-min) {
         width: 45%;
       }
     }
+    .nav-menu-toggle{
+      .visible-xs;
+      .kf-chevron-down;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding: 24px;
+      color: #fff;
+      font-size: @font-size-h3;
+
+      @media (min-width: @screen-sm-min) {
+        font-size: @font-size-h2;
+      }
+      @media (min-width: @screen-md-min) {
+        font-size: @font-size-h1;
+      }
+      &.open{
+        .kf-chevron-up;
+      }
+    }
+
     .blog-description {
       float: left;
       padding: 18px 18px 18px 30px;
       color: @brand-primary;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 24px;
       display: inline-block;
       width: 100%;
 
       @media (min-width: @screen-sm-min) {
-
+        font-size: 16px;
       }
       @media (min-width: @screen-md-min) {
         width: 50%;
@@ -97,6 +124,12 @@
   }
 
   .navbar {
+    min-height: 0;
+    margin-bottom: 0;
+    @media (min-width: @screen-sm-min) {
+      min-height: 50px;
+      margin-bottom: 26px;
+    }
 
     @media (min-width: @screen-md-min) {
       margin-top: 18px;
@@ -104,21 +137,16 @@
 
     // Default navbar
     &.navbar-default {
-      background-color: @navbar-default-bg;
       border:none;
 
       .navbar-text {
-        color: @navbar-default-color;
       }
 
       .navbar-nav {
         > li > a {
-          color: @navbar-default-link-color;
 
           &:hover,
           &:focus {
-            color: @navbar-default-link-hover-color;
-            background-color: @navbar-default-link-hover-bg;
             text-decoration: underline;
           }
         }
@@ -126,8 +154,6 @@
           &,
           &:hover,
           &:focus {
-            color: @navbar-default-link-active-color;
-            background-color: @navbar-default-link-active-bg;
             font-weight: bold;
           }
         }
@@ -135,21 +161,25 @@
           &,
           &:hover,
           &:focus {
-            color: @navbar-default-link-disabled-color;
-            background-color: @navbar-default-link-disabled-bg;
+
           }
         }
       }
 
       .navbar-toggle {
+        background-color: @brand-light;
         border-color: @navbar-default-toggle-border-color;
+        .icon-bar {
+        background-color: @navbar-default-toggle-icon-bar-bg;
+        }
         &:hover,
         &:focus {
           background-color: @navbar-default-toggle-hover-bg;
+          .icon-bar{
+            background-color: @navbar-default-toggle-icon-bar-bg-hover;
+          }
         }
-        .icon-bar {
-          background-color: @navbar-default-toggle-icon-bar-bg;
-        }
+
       }
 
       .navbar-collapse,

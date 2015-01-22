@@ -1,3 +1,18 @@
 .sidebar {
   .make-sm-column(@sidebar-sm-columns);
+  @media (min-width: @screen-sm-min) {
+    padding: 0;
+  }
+
+  .widget{
+    background-color: #f4f4f4;
+    margin-bottom: 1.5em;
+    min-height: 20px;
+    padding: 1em;
+    >h3{
+      margin-top: 0;
+      font-family: @font-family-sans-serif;
+      font-size: 26px;
+    }
+  }
 }
