@@ -22,7 +22,9 @@ var Roots = {
   // All pages
   common: {
     init: function() {
-      // JavaScript to be fired on all pages
+      $('.nav-menu-toggle').click(function(e){
+          $(this).toggleClass('open');
+      });
     }
   },
   // Home page
