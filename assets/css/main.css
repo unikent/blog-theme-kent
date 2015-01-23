@@ -7271,6 +7271,10 @@ figure.alignnone {
   font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 26px;
 }
+.hentry {
+  clear: both;
+  margin-bottom: 72px;
+}
 .hentry .byline .avatar {
   display: inline-block;
   border-radius: 50px;
