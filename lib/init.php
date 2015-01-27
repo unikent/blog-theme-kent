@@ -37,7 +37,10 @@ function roots_setup() {
   //add blog header image size
   add_image_size( 'blog_header', 1920, 99999, false );
 
+  add_theme_support( 'jetpack-responsive-videos' );
+
 }
+
 add_action('after_setup_theme', 'roots_setup');
 
 /**

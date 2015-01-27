@@ -1,7 +1,7 @@
 <?php
 /**
  * Theme activation
- */
+
 if (is_admin() && isset($_GET['activated']) && 'themes.php' == $GLOBALS['pagenow']) {
   wp_redirect(admin_url('themes.php?page=theme_activation_options'));
   exit;
@@ -208,7 +208,7 @@ function roots_theme_activation_action() {
   update_option('roots_theme_activation_options', $roots_theme_activation_options);
 }
 add_action('admin_init','roots_theme_activation_action');
-
+*/
 function roots_deactivation() {
   delete_option('roots_theme_activation_options');
 }

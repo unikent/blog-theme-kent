@@ -1,105 +1,71 @@
-# [Roots Starter Theme](http://roots.io/)
-[![devDependency Status](https://david-dm.org/roots/roots/dev-status.svg)](https://david-dm.org/roots/roots#info=devDependencies)
+# Kent Blog Theme
 
-Roots is a WordPress starter theme based on [HTML5 Boilerplate](http://html5boilerplate.com/) & [Bootstrap](http://getbootstrap.com/) that will help you make better themes.
+A new responsive, on-brand theme for blogs at blog.kent.ac.uk
 
-* Source: [https://github.com/roots/roots](https://github.com/roots/roots)
-* Homepage: [http://roots.io/](http://roots.io/)
-* Documentation: [http://roots.io/docs/](http://roots.io/docs/)
-* Twitter: [@rootswp](https://twitter.com/rootswp), [@retlehs](https://twitter.com/retlehs), [@swalkinshaw](https://twitter.com/swalkinshaw), [@Foxaii](https://twitter.com/Foxaii), [@c2foryou](https://twitter.com/c2foryou)
-* Newsletter: [Subscribe](http://roots.io/subscribe/)
-* Forum: [http://discourse.roots.io/](http://discourse.roots.io/)
+## Installing
 
-## Features
+Download and install to the your themes folder within wp-content.
 
-* [Grunt](http://roots.io/using-grunt-for-wordpress-theme-development/) for compiling LESS to CSS, checking for JS errors, live reloading, concatenating and minifying files, versioning assets, and generating lean Modernizr builds
-* [Bower](http://bower.io/) for front-end package management
-* [HTML5 Boilerplate](http://html5boilerplate.com/)
-  * The latest [jQuery](http://jquery.com/) via Google CDN, with a local fallback
-  * The latest [Modernizr](http://modernizr.com/) build for feature detection, with lean builds with Grunt
-  * An optimized Google Analytics snippet
-* [Bootstrap](http://getbootstrap.com/)
-* Organized file and template structure
-* ARIA roles and microformats
-* [Theme activation](http://roots.io/roots-101/#theme-activation)
-* [Theme wrapper](http://roots.io/an-introduction-to-the-roots-theme-wrapper/)
-* Cleaner HTML output of navigation menus
-* Posts use the [hNews](http://microformats.org/wiki/hnews) microformat
-* [Multilingual ready](http://roots.io/wpml/) and over 30 available [community translations](https://github.com/roots/roots-translations)
+To install via composer see [composer installers](https://github.com/composer/installers) and add the following lines to your composer.json
 
-### Additional features
-
-Install the [Soil](https://github.com/roots/soil) plugin to enable additional features:
-
-* Root relative URLs
-* Nice search (`/search/query/`)
-* Cleaner output of `wp_head` and enqueued assets markup
-
-## Installation
-
-Clone the git repo - `git clone git://github.com/roots/roots.git` - or [download it](https://github.com/roots/roots/zipball/master) and then rename the directory to the name of your theme or website.
-
-If you don't use [Bedrock](https://github.com/roots/bedrock), you'll need to add the following to your `wp-config.php` on your development installation:
-
-```php
-define('WP_ENV', 'development');
 ```
 
-## Theme activation
+	{
+	   "repositories": [
+		 { 
+           "type":"package",
+           "package": {
+             "name": "unikent/blog-theme-kent",
+             "type": "wordpress-theme",
+             "version":"master",
+             "source": {
+                 "url": "https://github.com/unikent/blog-theme-kent",
+                 "type": "git",
+                 "reference":"master"
+               }
+           }
+         }
+	   ],
+	   "require":{
+	    "unikent/blog-theme-kent":"dev-master"
+	   }
+	}
+   
+```
 
-Reference the [theme activation](http://roots.io/roots-101/#theme-activation) documentation to understand everything that happens once you activate Roots.
 
-## Configuration
+## Developing
 
-Edit `lib/config.php` to enable or disable theme features and to define a Google Analytics ID.
+The theme will load compressed and minified JS, and compiled minified CSS by default.
 
-Edit `lib/init.php` to setup navigation menus, post thumbnail sizes, post formats, and sidebars.
+To load prettier development versions instead set the `WP_ENV` php constant to *development* or *local*.
 
-## Theme development
+This is best done in your wp-config.php file
 
-Roots uses [Grunt](http://gruntjs.com/) for compiling LESS to CSS, checking for JS errors, live reloading, concatenating and minifying files, versioning assets, and generating lean Modernizr builds.
+**This is done for you automagically on blogs-test.ac.uk**
 
-If you'd like to use Bootstrap Sass, look at the [Roots Sass](https://github.com/roots/roots-sass) fork.
+## Creating A Build
 
-### Install Grunt and Bower
+The theme assets are pre-built however there is a grunt task to rebuild if developing.
 
-**Unfamiliar with npm? Don't have node installed?** [Download and install node.js](http://nodejs.org/download/) before proceeding.
+1. Install Node.js - this includes npm by default.
 
-From the command line:
+2. Install Grunt globally - its quite useful! `npm install -g grunt` or `npm install -g grunt-cli` for the cli version. 
 
-1. Install `grunt-cli` and `bower` globally with `npm install -g grunt-cli bower`.
-2. Navigate to the theme directory, then run `npm install`. npm will look at `package.json` and automatically install the necessary dependencies. It will also automatically run `bower install`, which installs front-end packages defined in `bower.json`.
+4. Install the dependencies of our Grunt task - `npm install` from the themes directory.
 
-When completed, you'll be able to run the various Grunt commands provided from the command line.
+3. Run Grunt - `grunt dev` from the kentblogs directory for development assets, or `grunt build` for production.
 
-**N.B.** 
-You will need write permission to the global npm directory to install `grunt-cli` and `bower`. You will also likely have to be using an elevated terminal or prefix the command with `sudo`, i.e., `sudo npm install -g grunt-cli bower`. 
 
-We also advise against running as root user. NPM deliberately uses limited privileges when executing certain commands such as those included in the Roots post-install process, and when this happens to the root user, any file system objects that are not expressly writable by the root user will fail to write during the execution of the command. These might include directories such as `/var/www` or `/home/someotheruser`. If you're running as root and have problems, don't say we didn't warn you.
+## Customising
 
-### Available Grunt commands
+There are currently few customisation options available.
 
-* `grunt dev` — Compile LESS to CSS, concatenate and validate JS
-* `grunt watch` — Compile assets when file changes are made
-* `grunt build` — Create minified assets that are used on non-development environments
 
-## Documentation
+### Blog Header Image
 
-* [Roots 101](http://roots.io/roots-101/) — A guide to installing Roots, the files, and theme organization
-* [Theme Wrapper](http://roots.io/an-introduction-to-the-roots-theme-wrapper/) — Learn all about the theme wrapper
-* [Build Script](http://roots.io/using-grunt-for-wordpress-theme-development/) — A look into how Roots uses Grunt
-* [Roots Sidebar](http://roots.io/the-roots-sidebar/) — Understand how to display or hide the sidebar in Roots
+Access the customizer from *Appearance -> Customize* in the wordpress dashboard
 
-## Contributing
+The heaader image is an option under *Site Title &amp; Tagline*.
 
-Everyone is welcome to help [contribute](CONTRIBUTING.md) and improve this project. There are several ways you can contribute:
-
-* Reporting issues (please read [issue guidelines](https://github.com/necolas/issue-guidelines))
-* Suggesting new features
-* Writing or refactoring code
-* Fixing [issues](https://github.com/roots/roots/issues)
-* Replying to questions on the [forum](http://discourse.roots.io/)
-
-## Support
-
-Use the [Roots Discourse](http://discourse.roots.io/) to ask questions and get support.
+**Images should be at least 1200px x 480px.**
