@@ -13,7 +13,35 @@
 .comment-form textarea {
   &:extend(.form-control all);
 }
+.comment-form textarea{
+  min-height: 6em;
+}
 .comment-form input[type="submit"] {
   &:extend(.btn all);
   &:extend(.btn-primary all);
+  &:extend(.btn-lg all);
+  border-radius: 0;
+}
+
+.comments {
+  margin-top: 24px;
+  background-color: #f4f4f4;
+  padding: 12px 24px;
+  .comment-respond {
+    h3 {
+      margin-top: 1em;
+      font-family: @font-family-sans-serif;
+    }
+  }
+
+  #form-allowed-tags{
+    font-size: 0.7em;
+  }
+  p.comment-subscription-form{
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+  label > span.required{
+    color: @alert-danger-text;
+  }
 }
