@@ -7007,6 +7007,24 @@ fieldset[disabled] .btn-kent.active {
 .comments label > span.required {
   color: #a94442;
 }
+.main .search-form {
+  padding: 1em;
+  background: #F4F4F4;
+}
+.main .search-form input {
+  font-size: 1.6em;
+  height: 1.7em;
+  line-height: 2em;
+  color: #05345c;
+}
+.main .search-form .btn,
+.main .search-form .comment-form input[type="submit"] {
+  padding: 10px;
+}
+.main .search-form .btn i:before,
+.main .search-form .comment-form input[type="submit"] i:before {
+  font-size: 2em;
+}
 .gallery-row {
   padding: 12px 0;
 }
