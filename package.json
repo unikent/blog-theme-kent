@@ -1,14 +1,14 @@
 {
-  "name": "roots",
-  "version": "7.0.3",
-  "author": "Ben Word <ben@benword.com>",
-  "homepage": "http://roots.io",
+  "name": "blogs-theme-kent",
+  "version": "1.0.0",
+  "author": "IS WEBDEV <is-webdev@kent.ac.uk>",
+  "homepage": "https://github.com/unikent/blog-theme-kent",
   "repository": {
     "type": "git",
-    "url": "git://github.com/roots/roots.git"
+    "url": "git://github.com/unikent/blog-theme-kent.git"
   },
   "bugs": {
-    "url": "https://github.com/roots/roots/issues"
+    "url": "https://github.com/unikent/blog-theme-kent/issues"
   },
   "licenses": [
     {

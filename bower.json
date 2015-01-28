@@ -1,9 +1,9 @@
 {
-  "name": "roots",
-  "version": "7.0.3",
-  "homepage": "http://roots.io",
+  "name": "blogs-theme-kent",
+  "version": "1.0.0",
+  "homepage": "https://github.com/unikent/blog-theme-kent",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "IS WEBDEV <is-webdev@kent.ac.uk>"
   ],
   "license": "MIT",
   "private": true,

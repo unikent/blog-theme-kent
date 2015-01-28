@@ -7790,7 +7790,7 @@ h6,
 .hentry footer .comments-link {
   margin-right: 18px;
 }
-.latest-post {
+.grid-post {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -7798,51 +7798,53 @@ h6,
   margin-bottom: 24px;
 }
 @media (min-width: 768px) {
-  .latest-post {
+  .grid-post {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 1200px) {
-  .latest-post {
+  .grid-post {
     float: left;
     width: 33.33333333%;
   }
 }
-.latest-post .latest-post-img {
+.grid-post .grid-post-img {
   height: 233px;
   overflow: hidden;
 }
-.latest-post .latest-post-img img {
+.grid-post .grid-post-img img {
   width: 100%;
 }
-.latest-post .entry-title {
+.grid-post .entry-title {
   font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 20px;
   line-height: 1.3em;
 }
-.latest-post .byline {
+.grid-post .byline {
   font-size: 14px;
 }
-.latest-post .blog-source {
+.grid-post .blog-source,
+.grid-post .post-cat {
   text-transform: uppercase;
   color: #333333;
   border-bottom: none;
 }
-.latest-post .blog-source:hover {
+.grid-post .blog-source:hover,
+.grid-post .post-cat:hover {
   color: #333333;
   border-bottom: none;
 }
 @media (min-width: 768px) {
-  .latest-post:nth-child(odd) {
+  .grid-post:nth-child(odd) {
     clear: left;
   }
 }
 @media (min-width: 1200px) {
-  .latest-post:nth-child(odd) {
+  .grid-post:nth-child(odd) {
     clear: none;
   }
-  .latest-post:nth-child(3n+1) {
+  .grid-post:nth-child(3n+1) {
     clear: left;
   }
 }
