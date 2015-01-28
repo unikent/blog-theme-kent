@@ -7586,6 +7586,11 @@ h6,
   min-height: 20px;
   padding: 1em;
 }
+@media (min-width: 768px) {
+  .sidebar .widget {
+    margin-left: 1.7em;
+  }
+}
 .sidebar .widget > h3 {
   margin-top: 0;
   font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
