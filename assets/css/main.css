@@ -7599,6 +7599,7 @@ h6,
   line-height: 1.5em;
   padding-left: 20px;
   position: relative;
+  margin-bottom: 0.3em;
 }
 .sidebar .widget ul li:before {
   font-family: "kentfont";
@@ -7616,7 +7617,7 @@ h6,
   left: 4px;
   margin-right: 14px;
   position: absolute;
-  top: 14px;
+  top: 3px;
 }
 .sidebar .widget_recent_entries ul {
   padding: 0;
