@@ -7019,11 +7019,23 @@ fieldset[disabled] .btn-kent.active {
 }
 .main .search-form .btn,
 .main .search-form .comment-form input[type="submit"] {
-  padding: 10px;
+  height: 2.8em;
 }
 .main .search-form .btn i:before,
 .main .search-form .comment-form input[type="submit"] i:before {
   font-size: 2em;
+}
+@media (min-width: 768px) {
+  .main .search-form .btn,
+  .main .search-form .comment-form input[type="submit"] {
+    height: 3.2em;
+  }
+}
+@media (min-width: 992px) {
+  .main .search-form .btn,
+  .main .search-form .comment-form input[type="submit"] {
+    height: 3.5em;
+  }
 }
 .gallery-row {
   padding: 12px 0;
@@ -7596,6 +7608,7 @@ h6,
 @media (min-width: 768px) {
   .sidebar {
     padding: 0;
+    margin-top: 6em;
   }
 }
 .sidebar .widget {
@@ -7613,6 +7626,7 @@ h6,
   margin-top: 0;
   font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 26px;
+  color: #05345c;
 }
 .sidebar .widget ul {
   list-style: none;
@@ -7714,6 +7728,12 @@ h6,
 .hentry header h1,
 .hentry header h2 {
   margin-top: 0.7em;
+}
+.hentry header h2 a {
+  border-bottom: 0;
+}
+.hentry header h2 a:hover {
+  border-bottom: 0;
 }
 .hentry header h1 + h2 {
   font-size: 1.2em;

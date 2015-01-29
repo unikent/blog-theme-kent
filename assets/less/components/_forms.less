@@ -9,9 +9,15 @@
       color: @brand-primary;
     }
     .btn{
-      padding: 10px;
       i:before{
         font-size: 2em;
+      }
+      height: 2.8em;
+      @media (min-width: @screen-sm-min) {
+        height: 3.2em;
+      }
+      @media (min-width: @screen-md-min) {
+        height: 3.5em;
       }
     }
   }

@@ -1,6 +1,6 @@
 <article <?php post_class(); ?>>
   <header>
-    <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <h2 class="entry-title h1"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     <?php $sub = get_post_meta($post->ID, 'SubHeading',true);
     if(!empty($sub)){
       ?>

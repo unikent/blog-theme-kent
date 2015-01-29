@@ -54,7 +54,7 @@ The theme assets are pre-built however there is a grunt task to rebuild if devel
 
 4. Install the dependencies of our Grunt task - `npm install` from the themes directory.
 
-3. Run Grunt - `grunt dev` from the kentblogs directory for development assets, or `grunt build` for production.
+3. Run Grunt - `grunt dev` from the theme root for development assets, or `grunt build` for production.
 
 
 ## Customising
