@@ -7014,7 +7014,6 @@ fieldset[disabled] .btn-kent.active {
 .main .search-form input {
   font-size: 1.6em;
   height: 1.7em;
-  line-height: 2em;
   color: #05345c;
 }
 .main .search-form .btn,
@@ -7817,6 +7816,25 @@ h6,
   margin-right: 14px;
   position: absolute;
   top: 14px;
+}
+.hentry .entry-content .sd-social ul,
+.hentry .entry-summary .sd-social ul,
+.hentry .entry-content .sd-sharing ul,
+.hentry .entry-summary .sd-sharing ul {
+  list-style: none;
+  padding-left: 0;
+}
+.hentry .entry-content .sd-social ul li,
+.hentry .entry-summary .sd-social ul li,
+.hentry .entry-content .sd-sharing ul li,
+.hentry .entry-summary .sd-sharing ul li {
+  padding-left: 0;
+}
+.hentry .entry-content .sd-social ul li:before,
+.hentry .entry-summary .sd-social ul li:before,
+.hentry .entry-content .sd-sharing ul li:before,
+.hentry .entry-summary .sd-sharing ul li:before {
+  content: '';
 }
 .hentry footer {
   background: #f4f4f4;
