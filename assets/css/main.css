@@ -7872,6 +7872,9 @@ h6,
 .grid-post .grid-post-img img {
   width: 100%;
 }
+.grid-post .grid-post-img img:hover {
+  opacity: 0.9;
+}
 .grid-post .entry-title {
   font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 20px;
