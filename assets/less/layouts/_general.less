@@ -1,11 +1,39 @@
+html{
+  font-size: @font-size-base;
+}
 
-p{
-  margin-bottom: 1.6em;
+body,
+button,
+input,
+select,
+textarea {
+  font-size: 0.895em;
+  line-height: 1.6em;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+p,
+address,
+pre,
+hr,
+ul,
+ol,
+dl,
+dd,
+table {
+  margin-bottom: 1.7em;
 }
 
 blockquote{
-  font-size: 18px;
-  line-height: 1.6667;
+  font-family: @headings-font-family;
+  font-style: italic;
+  font-size: 1.13em;
+  line-height: 1.392;
+  margin: 1.3em 0.2em 1.4em 0.2em;
 }
 
 pre{
@@ -40,36 +68,31 @@ big {
 
 h1,.h1{
   font-size: @font-size-h1;
-  line-height: 1.1538;
-  margin-top: 1.8462em;
-  margin-bottom: 0.9231em;
+  line-height: 1.2em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
   color: @brand-primary;
 }
 h2,.h2{
   font-size: @font-size-h2;
-  line-height: 1.3636;
-  margin-top: 2.1818em;
-  margin-bottom: 1.0909em;
+  line-height: 1.367;
+  margin-top: 0;
+  margin-bottom: 0.6em;
   color: @brand-primary;
 }
 h3,.h3{
   font-size: @font-size-h3;
-  line-height: 1.3333;
-  margin-top: 2.6667em;
-  margin-bottom: 1.3333em;
+  line-height: 1.362;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-h4,.h4{
-  font-size: @font-size-h4;
-  line-height: 1.2;
-  margin-top: 3.2em;
-  margin-bottom: 1.6em;
-}
+h4,.h4,
 h5,.h5,
 h6,.h6{
-  font-size: @font-size-h6;
-  line-height: 1.2;
-  margin-top: 3.2em;
-  margin-bottom: 1.6em;
+  font-size: @font-size-h4;
+  line-height: 1.362;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 
@@ -80,8 +103,8 @@ h6,.h6{
   input,
   select,
   textarea {
-    font-size: 17px;
-    line-height: 1.6471;
+    font-size: 0.895em;
+    line-height: 1.48em;
   }
 
   button,
@@ -98,39 +121,34 @@ h6,.h6{
   dl,
   dd,
   table {
-    margin-bottom: 1.6471em;
+    margin-bottom: 1.4em;
   }
 
   h1,.h1{
-    font-size: 35px;
-    line-height: 1.2;
-    margin-top: 1.6em;
-    margin-bottom: 0.8em;
+    font-size: 2.28em;
+    line-height: 1.292em;
+    margin-top: 0;
+    margin-bottom: 0.3em;
   }
   h2,.h2{
-    font-size: 29px;
-    line-height: 1.2069;
-    margin-top: 1.931em;
-    margin-bottom: 0.9655em;
+    font-size: 1.27em;
+    line-height: 1.367em;
+    margin-top: 0;
+    margin-bottom: 0.6em;
   }
   h3,.h3{
-    font-size: 24px;
-    line-height: 1.1667;
-    margin-top: 2.3333em;
-    margin-bottom: 1.1667em;
+    font-size: 1em;
+    line-height: 1.362em;
+    margin-top: 0;
+    margin-bottom: 0;
   }
-  h4,.h4{
-    font-size: 20px;
-    line-height: 1.4;
-    margin-top: 2.8em;
-    margin-bottom: 1.4em;
-  }
+  h4,.h4,
   h5,.h5,
   h6,.h6{
-    font-size: 17px;
-    line-height: 1.2353;
-    margin-top: 3.2941em;
-    margin-bottom: 1.6471em;
+    font-size: 1em;
+    line-height: 1.362em;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -140,8 +158,8 @@ h6,.h6{
   input,
   select,
   textarea {
-    font-size: 19px;
-    line-height: 1.6842;
+    font-size: 1em;
+    line-height: 1.58em;
   }
 
   button,
@@ -158,100 +176,36 @@ h6,.h6{
   dl,
   dd,
   table {
-    margin-bottom: 1.6842em;
+    margin-bottom: 1.5em;
   }
 
   h1,.h1{
-    font-size: 39px;
+    font-size: 2.57em;
     line-height: 1.2308;
-    margin-top: 1.641em;
-    margin-bottom: 0.8205em;
+    margin-top: 0;
+    margin-bottom: 0.6em;
   }
   h2,.h2{
-    font-size: 32px;
-    line-height: 1.25;
-    margin-top: 2em;
-    margin-bottom: 1em;
+    font-size: 1.53em;
+    line-height: 1.14em;
+    margin-top: 0;
+    margin-bottom: 0.55em;
   }
   h3,.h3{
-    font-size: 27px;
-    line-height: 1.1852;
-    margin-top: 2.3704em;
-    margin-bottom: 1.1852em;
+    font-size: 1em;
+    line-height: 1.152em;
+    margin-top: 0;
+    margin-bottom: 0;
   }
-  h4,.h4{
-    font-size: 22px;
-    line-height: 1.4545;
-    margin-top: 2.9091em;
-    margin-bottom: 1.4545em;
-  }
+  h4,.h4,
   h5,.h5,
   h6,.h6{
-    font-size: 19px;
-    line-height: 1.2632;
-    margin-top: 3.3684em;
-    margin-bottom: 1.6842em;
+    font-size: 1em;
+    line-height: 1.152em;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
-}
-@media (min-width: @screen-lg-min) {
-
-  body,
-  button,
-  input,
-  select,
-  textarea {
-    font-size: 19px;
-    line-height: 1.6842;
-  }
-
-  button,
-  input {
-    line-height: normal;
-  }
-
-  p,
-  address,
-  pre,
-  hr,
-  ul,
-  ol,
-  dl,
-  dd,
-  table {
-    margin-bottom: 1.6842em;
-  }
-
-  h1,.h1{
-    font-size: 39px;
-    line-height: 1.2308;
-    margin-top: 1.641em;
-    margin-bottom: 0.8205em;
-  }
-  h2,.h2{
-    font-size: 32px;
-    line-height: 1.25;
-    margin-top: 2em;
-    margin-bottom: 1em;
-  }
-  h3,.h3{
-    font-size: 27px;
-    line-height: 1.1852;
-    margin-top: 2.3704em;
-    margin-bottom: 1.1852em;
-  }
-  h4,.h4{
-    font-size: 22px;
-    line-height: 1.4545;
-    margin-top: 2.9091em;
-    margin-bottom: 1.4545em;
-  }
-  h5,.h5, h6,.h6{
-    font-size: 19px;
-    line-height: 1.2632;
-    margin-top: 3.3684em;
-    margin-bottom: 1.6842em;
-  }
 }
 
 // Content wrapper
@@ -267,8 +221,12 @@ h6,.h6{
   .sidebar-primary & {
     .make-sm-column(@main-sm-columns - @sidebar-sm-columns);
   }
-
-  h1{
-    margin-top: 1em;
+  .single & {
+    .make-sm-column(12);
+    .make-md-column(@main-sm-columns - @sidebar-sm-columns + 2);
+    .make-md-column-offset((@sidebar-sm-columns - 2)/2);
+    .make-lg-column(@main-sm-columns - @sidebar-sm-columns);
+    .make-lg-column-offset(@sidebar-sm-columns/2);
   }
+
 }

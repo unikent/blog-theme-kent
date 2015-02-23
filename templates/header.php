@@ -34,7 +34,7 @@
       <div class="input-group">
         <input type="search" value="<?php echo get_search_query(); ?>" name="s" class="search-field form-control" placeholder="Search this blog" required>
     <span class="input-group-btn">
-      <button type="submit" class="search-submit btn btn-default"><span class="sr-only"><?php _e('Search', 'roots'); ?></span><i class="kf-search"></i></button>
+      <button type="submit" class="search-submit btn btn-primary"><span class="sr-only"><?php _e('Search', 'roots'); ?></span><i class="kf-search"></i></button>
     </span>
       </div>
     </form>

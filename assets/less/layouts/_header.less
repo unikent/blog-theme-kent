@@ -85,18 +85,13 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      padding: 24px;
+      padding: 0 24px 32px 0;
       color: #fff;
       font-size: 28px;
 
-      @media (min-width: @screen-sm-min) {
-        font-size: 34px;
-      }
-      @media (min-width: @screen-md-min) {
-        font-size: 41px;
-      }
       &.open{
         .kf-chevron-up;
+        font-size: 28px;
       }
     }
 
@@ -104,8 +99,8 @@
       float: left;
       padding: 18px 18px 18px 30px;
       color: @brand-primary;
-      font-size: 14px;
-      line-height: 24px;
+      font-size: 0.895em;
+      line-height: 1.48em;
       display: inline-block;
       width: 100%;
 
@@ -124,15 +119,14 @@
   }
 
   .navbar {
+    font-size: 0.895em;
     min-height: 0;
     margin-bottom: 0;
+
     @media (min-width: @screen-sm-min) {
       min-height: 50px;
-      margin-bottom: 26px;
-    }
-
-    @media (min-width: @screen-md-min) {
-      margin-top: 18px;
+      margin-bottom: 3em;
+      padding: 0;
     }
 
     // Default navbar

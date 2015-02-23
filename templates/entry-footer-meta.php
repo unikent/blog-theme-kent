@@ -2,14 +2,14 @@
 $categories_list = get_the_category_list( ', ');
 if ( $categories_list ) {
 ?>
-<span class="cat-links"><span class="screen-reader-text">Categories: </span><?php echo $categories_list; ?></span>
+<span class="cat-links"><span class="screen-reader-text">Categories:&nbsp;</span><?php echo $categories_list; ?></span>
 <?php
 }
 
 $tags_list = get_the_tag_list( '',', ');
 if ( $tags_list ) {
     ?>
-    <span class="tag-links"><span class="screen-reader-text">Tags: </span><?php echo $tags_list; ?></span>
+    <span class="tag-links"><span class="screen-reader-text">Tags:&nbsp;</span><?php echo $tags_list; ?></span>
 <?php
 }
 

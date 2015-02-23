@@ -3,10 +3,14 @@
  * Clean up the_excerpt()
  */
 function roots_excerpt_more() {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'roots') . '</a>';
+  return ' &hellip; <a href="' . get_permalink() . '">' . __('Read&nbsp;more', 'roots') . '</a>';
 }
-add_filter('excerpt_more', 'roots_excerpt_more');
+add_filter('excerpt_more', 'roots_excerpt_more',99);
 
+function roots_excerpt_length( $length ) {
+  return 25;
+}
+add_filter( 'excerpt_length', 'roots_excerpt_length',99 );
 
 function get_attachment_id_from_src ($image_src) {
 
@@ -105,7 +109,30 @@ Class Kentblogs_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
             $fsrc = wp_get_attachment_image_src($fid, 'thumbnail', false);
             $fsrc = $fsrc[0];
           }else{
-            $fsrc = get_template_directory_uri() . '/assets/img/featured-holding-thumb.png';
+              // get direct post attachments
+              $media_image_ids = get_posts( array(
+                  'post_parent' => get_the_ID(),
+                  'post_mime_type' => 'image',
+                  'post_type' => 'attachment',
+                  'fields' => 'ids',
+                  'posts_per_page' => 1
+              ) );
+              //get media in content
+              if ( preg_match_all( '|<img.*?class=[\'"](.*?)wp-image-([0-9]{1,6})(.*?)[\'"].*?>|i', get_the_content(), $matches ) ) {
+                  $media_image_ids = array_merge( $media_image_ids, $matches[2] );
+              }
+              if(!empty($media_image_ids)){
+                  $fsrc = wp_get_attachment_image_src($media_image_ids[0], 'thumbnail', false);
+                  $fsrc = $fsrc[0];
+              }else{
+                  $default = get_option('kb_default_aggregator_img');
+                  if(!empty($default)){
+                      $fsrc = wp_get_attachment_image_src($default, 'thumbnail', false);
+                      $fsrc = $fsrc[0];
+                  }else {
+                      $fsrc = get_template_directory_uri() . '/assets/img/featured-holding-thumb.png';
+                  }
+              }
           }
           ?>
           <li>
