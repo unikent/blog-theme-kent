@@ -8037,8 +8037,10 @@ h6,
   font-weight: 300;
 }
 .hentry .entry-content > p:first-child > strong,
-.hentry .entry-summary > p:first-child > strong {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+.hentry .entry-summary > p:first-child > strong,
+.hentry .entry-content p.lead,
+.hentry .entry-summary p.lead {
+  font-size: 1em;
   line-height: 1.6em;
   font-family: "Century Schoolbook", "Times New Roman", Times, serif;
   color: #05345c;
@@ -8185,6 +8187,7 @@ h6,
   font-size: 0.9em;
   line-height: 1.48em;
   font-weight: 300;
+  word-wrap: break-word;
 }
 .grid-post .byline {
   font-size: 0.7em;

@@ -52,8 +52,8 @@
   .entry-content,.entry-summary {
     font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 300;
-    & > p:first-child > strong{
-      .h3;
+    & > p:first-child > strong, p.lead{
+      font-size: 1em;
       line-height: 1.6em;
       font-family: @font-family-serif;
       color: @brand-primary;
@@ -132,6 +132,7 @@
     font-size: 0.9em;
     line-height: 1.48em;
     font-weight: 300;
+    word-wrap: break-word;
   }
 
   .byline{
