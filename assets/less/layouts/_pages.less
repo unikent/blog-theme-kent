@@ -12,6 +12,8 @@
         padding-left: 20px;
         position: relative;
         .kf-square;
+        display: list-item;
+        line-height: inherit;
         &:before{
           color: @brand-primary;
           font-size: 0.29em;
@@ -19,6 +21,19 @@
           margin-right: 14px;
           position: absolute;
           top: 14px;
+        }
+      }
+    }
+    .sd-social, .sd-sharing{
+      ul {
+        list-style: none;
+        padding-left: 0;
+        li {
+          padding-left: 0;
+          display: inline-block;
+          &:before{
+            content: '';
+          }
         }
       }
     }

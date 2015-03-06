@@ -7223,24 +7223,14 @@ fieldset[disabled] .btn-kent.active {
   height: 1.7em;
   color: #05345c;
 }
-.main .search-form .btn,
-.main .search-form .comment-form input[type="submit"] {
-  height: 2.8em;
-}
 .main .search-form .btn i:before,
 .main .search-form .comment-form input[type="submit"] i:before {
-  font-size: 2em;
-}
-@media (min-width: 768px) {
-  .main .search-form .btn,
-  .main .search-form .comment-form input[type="submit"] {
-    height: 3.2em;
-  }
+  font-size: 1.5em;
 }
 @media (min-width: 992px) {
-  .main .search-form .btn,
-  .main .search-form .comment-form input[type="submit"] {
-    height: 3.5em;
+  .main .search-form .btn i:before,
+  .main .search-form .comment-form input[type="submit"] i:before {
+    font-size: 2em;
   }
 }
 .gallery-row {
@@ -7964,6 +7954,8 @@ h6,
       -ms-transform: translate(0px, 0px);
        -o-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
+  display: list-item;
+  line-height: inherit;
 }
 .page .main ul li:before {
   font-family: "kentfont";
@@ -7982,6 +7974,20 @@ h6,
   margin-right: 14px;
   position: absolute;
   top: 14px;
+}
+.page .main .sd-social ul,
+.page .main .sd-sharing ul {
+  list-style: none;
+  padding-left: 0;
+}
+.page .main .sd-social ul li,
+.page .main .sd-sharing ul li {
+  padding-left: 0;
+  display: inline-block;
+}
+.page .main .sd-social ul li:before,
+.page .main .sd-sharing ul li:before {
+  content: '';
 }
 .page-header {
   border-bottom: none;
@@ -8097,6 +8103,8 @@ h6,
       -ms-transform: translate(0px, 0px);
        -o-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
+  display: list-item;
+  line-height: inherit;
 }
 .hentry .entry-content ul li:before,
 .hentry .entry-summary ul li:before {
@@ -8117,7 +8125,7 @@ h6,
   left: 4px;
   margin-right: 14px;
   position: absolute;
-  top: 14px;
+  top: 0.5em;
 }
 .hentry .entry-content .sd-social ul,
 .hentry .entry-summary .sd-social ul,
@@ -8131,6 +8139,7 @@ h6,
 .hentry .entry-content .sd-sharing ul li,
 .hentry .entry-summary .sd-sharing ul li {
   padding-left: 0;
+  display: inline-block;
 }
 .hentry .entry-content .sd-social ul li:before,
 .hentry .entry-summary .sd-social ul li:before,
