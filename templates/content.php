@@ -29,10 +29,12 @@ if(!empty($fid)) {
         }
     }
 }
+$fsrc =   preg_replace(array('/http:\/\/blogs.kent.ac.uk\//','/https:\/\/blogs.kent.ac.uk\//'),'//blogs.kent.ac.uk/',preg_replace('/\/wp-content\/blogs.dir\/\d+/','',$fsrc));
+
 ?>
 <article class="grid-post">
   <div class="grid-post-img">
-    <a title="<?php echo esc_attr(get_the_title()); ?>" href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo preg_replace('/\/wp-content\/blogs.dir\/\d+/','',$fsrc); ?>"></a>
+    <a title="<?php echo esc_attr(get_the_title()); ?>" href="<?php the_permalink(); ?>"><img class="img-responsive" src="<?php echo $fsrc; ?>"></a>
   </div>
   <header>
     <h2 class="entry-title"><a title="<?php echo esc_attr(get_the_title()); ?>" href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
