@@ -1077,7 +1077,7 @@ h2,
 }
 h3,
 .h3 {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 h4,
 .h4 {
@@ -6636,6 +6636,13 @@ button.close {
   font-style: normal;
 }
 @font-face {
+  font-family: 'ariallight';
+  src: url('../fonts/arialmt-light-webfont.eot');
+  src: url('../fonts/arialmt-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/arialmt-light-webfont.woff2') format('woff2'), url('../fonts/arialmt-light-webfont.woff') format('woff'), url('../fonts/arialmt-light-webfont.ttf') format('truetype'), url('../fonts/arialmt-light-webfont.svg#ariallight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "kentfont";
   src: url("../vendor/kent-font/public/fonts/kentfont.eot");
   src: url("../vendor/kent-font/public/fonts/kentfont.eot?#iefix") format("embedded-opentype"), url("../vendor/kent-font/public/fonts/kentfont.woff") format("woff"), url("../vendor/kent-font/public/fonts/kentfont.ttf") format("truetype"), url("../vendor/kent-font/public/fonts/kentfont.svg?#kentfont") format("svg");
@@ -6661,22 +6668,29 @@ button.close {
 .kf-chevron-right,
 .kf-chevron-up,
 .kf-circle,
+.kf-creative-commons,
 .kf-email,
+.kf-facebook,
 .kf-kent-block,
 .kf-kent-horizontal,
 .kf-kent-ke,
 .kf-library-search,
+.kf-location,
 .kf-moodle,
+.kf-pin,
 .kf-sds,
 .kf-search,
 .kf-spinner,
 .kf-square,
 .kf-timetables,
 .kf-twitter,
+.kf-user,
+.kf-wheelchair,
 .kf-angle-down,
 .kf-angle-left,
 .kf-angle-right,
 .kf-angle-up,
+.kf-camera,
 .kf-caret-down,
 .kf-caret-left,
 .kf-caret-right,
@@ -6685,15 +6699,26 @@ button.close {
 .kf-close,
 .kf-exclamation-circle,
 .kf-external-link,
+.kf-google-plus,
+.kf-heart-o,
+.kf-heart,
 .kf-home,
 .kf-info-circle,
+.kf-linkedin,
+.kf-list,
 .kf-menu,
 .kf-minus,
 .kf-pause,
 .kf-play,
 .kf-plus,
 .kf-sort-asc,
-.kf-sort-desc {
+.kf-sort-desc,
+.kf-star-o,
+.kf-star,
+.kf-volume-high,
+.kf-volume-low,
+.kf-volume-medium,
+.kf-volume-mute {
   display: inline-block;
   -webkit-font-feature-settings: normal;
           font-feature-settings: normal;
@@ -6721,22 +6746,29 @@ button.close {
 .kf-chevron-right:before,
 .kf-chevron-up:before,
 .kf-circle:before,
+.kf-creative-commons:before,
 .kf-email:before,
+.kf-facebook:before,
 .kf-kent-block:before,
 .kf-kent-horizontal:before,
 .kf-kent-ke:before,
 .kf-library-search:before,
+.kf-location:before,
 .kf-moodle:before,
+.kf-pin:before,
 .kf-sds:before,
 .kf-search:before,
 .kf-spinner:before,
 .kf-square:before,
 .kf-timetables:before,
 .kf-twitter:before,
+.kf-user:before,
+.kf-wheelchair:before,
 .kf-angle-down:before,
 .kf-angle-left:before,
 .kf-angle-right:before,
 .kf-angle-up:before,
+.kf-camera:before,
 .kf-caret-down:before,
 .kf-caret-left:before,
 .kf-caret-right:before,
@@ -6745,15 +6777,26 @@ button.close {
 .kf-close:before,
 .kf-exclamation-circle:before,
 .kf-external-link:before,
+.kf-google-plus:before,
+.kf-heart-o:before,
+.kf-heart:before,
 .kf-home:before,
 .kf-info-circle:before,
+.kf-linkedin:before,
+.kf-list:before,
 .kf-menu:before,
 .kf-minus:before,
 .kf-pause:before,
 .kf-play:before,
 .kf-plus:before,
 .kf-sort-asc:before,
-.kf-sort-desc:before {
+.kf-sort-desc:before,
+.kf-star-o:before,
+.kf-star:before,
+.kf-volume-high:before,
+.kf-volume-low:before,
+.kf-volume-medium:before,
+.kf-volume-mute:before {
   font-family: "kentfont";
   display: inline-block;
   font-weight: normal;
@@ -6778,8 +6821,14 @@ button.close {
 .kf-circle:before {
   content: "\f111";
 }
+.kf-creative-commons:before {
+  content: "\f25e";
+}
 .kf-email:before {
   content: "\f0e0";
+}
+.kf-facebook:before {
+  content: "\f09a";
 }
 .kf-kent-block:before {
   content: "\e002";
@@ -6793,8 +6842,14 @@ button.close {
 .kf-library-search:before {
   content: "\f0ac";
 }
+.kf-location:before {
+  content: "\f124";
+}
 .kf-moodle:before {
   content: "\e004";
+}
+.kf-pin:before {
+  content: "\f041";
 }
 .kf-sds:before {
   content: "\f080";
@@ -6814,6 +6869,12 @@ button.close {
 .kf-twitter:before {
   content: "\f099";
 }
+.kf-user:before {
+  content: "\f007";
+}
+.kf-wheelchair:before {
+  content: "\f193";
+}
 .kf-angle-down:before {
   content: "\f107";
 }
@@ -6825,6 +6886,9 @@ button.close {
 }
 .kf-angle-up:before {
   content: "\f106";
+}
+.kf-camera:before {
+  content: "\f030";
 }
 .kf-caret-down:before {
   content: "\f0d7";
@@ -6850,11 +6914,26 @@ button.close {
 .kf-external-link:before {
   content: "\f08e";
 }
+.kf-google-plus:before {
+  content: "\f0d5";
+}
+.kf-heart-o:before {
+  content: "\f08a";
+}
+.kf-heart:before {
+  content: "\f004";
+}
 .kf-home:before {
   content: "\f015";
 }
 .kf-info-circle:before {
   content: "\f05a";
+}
+.kf-linkedin:before {
+  content: "\f0e1";
+}
+.kf-list:before {
+  content: "\f03a";
 }
 .kf-menu:before {
   content: "\f0c9";
@@ -6876,6 +6955,24 @@ button.close {
 }
 .kf-sort-desc:before {
   content: "\f0dd";
+}
+.kf-star-o:before {
+  content: "\f006";
+}
+.kf-star:before {
+  content: "\f005";
+}
+.kf-volume-high:before {
+  content: "\f028";
+}
+.kf-volume-low:before {
+  content: "\f027";
+}
+.kf-volume-medium:before {
+  content: "\e005";
+}
+.kf-volume-mute:before {
+  content: "\f026";
 }
 .kf-fw {
   width: 1.28571429em;
@@ -7280,6 +7377,10 @@ figure.alignnone {
 html {
   font-size: 19px;
 }
+b,
+strong {
+  font-weight: 600;
+}
 body,
 button,
 input,
@@ -7304,11 +7405,58 @@ table {
   margin-bottom: 1.7em;
 }
 blockquote {
+  border-left: none;
+  margin: 2.3em 0.2em 2.4em;
+  padding: 15px 30px;
+}
+blockquote p:first-child {
   font-family: "Century Schoolbook", "Times New Roman", Times, serif;
+  color: #05345c;
   font-style: italic;
-  font-size: 1.13em;
+  font-size: 1.1em;
   line-height: 1.392;
-  margin: 1.3em 0.2em 1.4em 0.2em;
+  margin-bottom: 0.4em;
+}
+blockquote p:nth-child(2) {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  font-size: 0.9em;
+}
+blockquote p:nth-child(3) {
+  margin: 0;
+  font-size: 0.9em;
+}
+blockquote.pullquote {
+  border-left: 5px solid #e8ebf2;
+}
+blockquote.pullquote p,
+blockquote.pullquote ul li {
+  font-family: "Century Schoolbook", "Times New Roman", Times, serif;
+  color: #05345c;
+  font-size: 19px;
+  font-weight: normal;
+  margin-bottom: 1.7em;
+}
+@media (min-width: 768px) {
+  blockquote.pullquote p,
+  blockquote.pullquote ul li {
+    margin-bottom: 1.4em;
+    font-size: 0.895em !important;
+  }
+}
+@media (min-width: 992px) {
+  blockquote.pullquote p,
+  blockquote.pullquote ul li {
+    margin-bottom: 1.5em;
+    font-size: 1em;
+  }
+}
+blockquote.pullquote ul li {
+  margin-bottom: 0;
+}
+blockquote.pullquote p:last-child {
+  margin-bottom: 0;
 }
 pre {
   line-height: 1.2;
@@ -7352,7 +7500,7 @@ h2,
 }
 h3,
 .h3 {
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 1.362;
   margin-top: 0;
   margin-bottom: 0;
@@ -7408,7 +7556,7 @@ h6,
   }
   h3,
   .h3 {
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.362em;
     margin-top: 0;
     margin-bottom: 0;
@@ -7465,7 +7613,7 @@ h6,
   }
   h3,
   .h3 {
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 1.152em;
     margin-top: 0;
     margin-bottom: 0;
@@ -7930,7 +8078,7 @@ h6,
   color: #666;
 }
 .page .main {
-  font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "ariallight", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 300;
 }
 .page .main h2,
@@ -7974,6 +8122,7 @@ h6,
           transform: translate(0px, 0px);
   display: list-item;
   line-height: inherit;
+  font-weight: inherit;
 }
 .page .main ul li:before {
   font-family: "kentfont";
@@ -8038,7 +8187,7 @@ h6,
 .hentry .byline {
   font-size: 0.79em;
   line-height: 1.534em;
-  font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "ariallight", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 300;
   color: #494949;
 }
@@ -8055,14 +8204,56 @@ h6,
 }
 .hentry .entry-featured {
   margin-bottom: 24px;
+  position: relative;
+}
+.hentry .entry-featured .attribution {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.8em;
+  padding: 0.1em 0.75em 0.1em 0.75em;
+  height: 27px;
+  font-family: "ariallight", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  cursor: pointer;
+}
+.hentry .entry-featured .attribution i {
+  font-size: 1.2em;
+  float: left;
+  margin-top: 5px;
+}
+.hentry .entry-featured .attribution span {
+  padding-top: 1px;
+  -webkit-transition: max-width 300ms;
+       -o-transition: max-width 300ms;
+          transition: max-width 300ms;
+  display: block;
+  max-width: 0;
+  max-height: 30px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.hentry .entry-featured .attribution span a {
+  color: #fff;
+  border-bottom: none;
+}
+.hentry .entry-featured .attribution.open i {
+  display: inline-block;
+}
+.hentry .entry-featured .attribution.open span {
+  max-width: 3000px;
+  max-height: 30px;
+}
+.hentry .entry-featured .attribution.open span a:hover {
+  text-decoration: underline;
 }
 .hentry .entry-content,
 .hentry .entry-summary {
-  font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "ariallight", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 300;
 }
-.hentry .entry-content > p:first-child > strong,
-.hentry .entry-summary > p:first-child > strong,
 .hentry .entry-content p.lead,
 .hentry .entry-summary p.lead {
   font-size: 1em;
@@ -8123,6 +8314,7 @@ h6,
           transform: translate(0px, 0px);
   display: list-item;
   line-height: inherit;
+  font-weight: inherit;
 }
 .hentry .entry-content ul li:before,
 .hentry .entry-summary ul li:before {
@@ -8211,7 +8403,7 @@ h6,
   margin: 0.7em 0 0.9em 0;
 }
 .grid-post .entry-content {
-  font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "ariallight", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.9em;
   line-height: 1.48em;
   font-weight: 300;

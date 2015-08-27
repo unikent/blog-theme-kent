@@ -24,13 +24,15 @@
       color: @brand-primary;
     }
   }
+
   time {
+
   }
   .byline {
 
     font-size: 0.79em;
     line-height: 1.534em;
-    font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: @font-family-sans-serif-light;
     font-weight: 300;
     color: #494949;
 
@@ -46,13 +48,59 @@
       }
     }
   }
+
   .entry-featured{
     margin-bottom: 24px;
+    position: relative;
+    .attribution {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 0.8em;
+      padding: 0.1em 0.75em 0.1em 0.75em;
+      height: 27px;
+      font-family: @font-family-sans-serif-light;
+      cursor: pointer;
+      i{
+        font-size: 1.2em;
+        float: left;
+        margin-top: 5px;
+      }
+      span{
+        padding-top: 1px;
+        transition: max-width 300ms;
+        display: block;
+        max-width: 0;
+        max-height: 30px;
+        overflow: hidden;
+        box-sizing: border-box;
+        a{
+          color: #fff;
+          border-bottom: none;
+        }
+      }
+      &.open {
+        i {
+          display: inline-block;
+        }
+        span{
+          max-width: 3000px;
+          max-height: 30px;
+          a:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
   }
+
   .entry-content,.entry-summary {
-    font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: @font-family-sans-serif-light;
     font-weight: 300;
-    & > p:first-child > strong, p.lead{
+
+    p.lead{
       font-size: 1em;
       line-height: 1.6em;
       font-family: @font-family-serif;
@@ -72,6 +120,7 @@
         .kf-square;
         display: list-item;
         line-height: inherit;
+        font-weight: inherit;
         &:before{
           color: @brand-primary;
           font-size: 0.29em;
@@ -82,6 +131,7 @@
         }
       }
     }
+
     .sd-social, .sd-sharing{
       ul {
         list-style: none;
@@ -131,7 +181,7 @@
     margin: 0.7em 0 0.9em 0;
   }
   .entry-content{
-    font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: @font-family-sans-serif-light;
     font-size: 0.9em;
     line-height: 1.48em;
     font-weight: 300;

@@ -2317,18 +2317,9 @@ var kentblogs = {
       $('.nav-menu-toggle').click(function(e){
           $(this).toggleClass('open');
       });
-    }
-  },
-  // Home page
-  home: {
-    init: function() {
-      // JavaScript to be fired on the home page
-    }
-  },
-  // About us page, note the change from about-us to about_us.
-  about_us: {
-    init: function() {
-      // JavaScript to be fired on the about us page
+      $('.attribution').click(function(){
+        $(this).toggleClass('open');
+      });
     }
   }
 };

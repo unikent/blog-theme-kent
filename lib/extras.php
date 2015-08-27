@@ -162,3 +162,96 @@ function kentblog_widget_registration() {
   register_widget('Kentblogs_Recent_Posts_Widget');
 }
 add_action('widgets_init', 'kentblog_widget_registration');
+
+
+function kentblogs_introtext_form(){
+    global $post;
+    $value= get_post_meta($post->ID,'IntroText',true);
+    echo '<textarea name="kb_introtext" placeholder="Intro Text (optional)">' . $value . '</textarea>';
+}
+
+function kentblogs_introtext_save($post_id, $post, $update){
+    if(isset($_POST['kb_introtext'])){
+        update_post_meta($post_id, 'IntroText', $_POST['kb_introtext']);
+    }
+    return $post_id;
+}
+add_action('save_post', 'kentblogs_introtext_save',10,3);
+
+
+function kentblogs_add_introtext_metabox()
+{
+    add_meta_box('kentblogs_introtext', 'Intro Text', 'kentblogs_introtext_form', 'post', 'after_title','low');
+}
+
+
+add_action('current_screen','kentblogs_add_introtext_metabox');
+
+
+function kentblogs_introtext_scripts(){
+    ?>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+
+        jQuery(function($)
+        {
+            //hide screen options
+            jQuery('.metabox-prefs label[for=kentblogs_introtext-hide]').remove();
+
+            //remove title
+            jQuery('#kentblogs_introtext > h3, #kentblogs_introtext > .handlediv').remove();
+
+        });
+        /* ]]> */
+    </script>
+    <style type="text/css">
+        #kentblogs_introtext {
+            border: none;
+            background: transparent;
+        }
+        #kentblogs_introtext .inside{
+            margin:0;
+            padding:0;
+        }
+        #kentblogs_introtext textarea{
+            background-color: #fff;
+            font-size: 1em;
+            height: 3em;
+            line-height: 100%;
+            margin: 0;
+            outline: 0 none;
+            padding: 2px 8px;
+            width: 100%;
+        }
+    </style>
+    <?php
+}
+add_action('admin_head', 'kentblogs_introtext_scripts');
+
+function get_image_attribution($id){
+    $meta = get_post_meta($id);
+    $meta = array_map(function($i){
+        return $i[0];
+    },$meta);
+
+    $out='';
+    $title = get_post($id)->post_title;
+    if(empty(trim($title))){
+        $title = 'Picture';
+    }else{
+        $title = '"' . $title .'"';
+    }
+    $out .= (array_key_exists("credit-tracker-publisher",$meta) && !empty($meta["credit-tracker-publisher"]))? $meta["credit-tracker-publisher"]. ': ' : '';
+    if(array_key_exists("credit-tracker-author",$meta) && !empty($meta["credit-tracker-author"])){
+        if(array_key_exists("credit-tracker-link",$meta) && !empty($meta["credit-tracker-link"])){
+            $out .= $title . ' by <a href="' . $meta["credit-tracker-link"] . '">' . $meta["credit-tracker-author"] . '</a>.';
+        }else{
+            $out .= $title . ' by ' . $meta["credit-tracker-author"] .'.';
+        }
+    }
+    if(array_key_exists("credit-tracker-license",$meta) && !empty($meta["credit-tracker-license"])){
+        $out .= ' ' . $meta["credit-tracker-license"];
+    }
+
+    return $out;
+}
