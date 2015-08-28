@@ -8366,7 +8366,22 @@ h6,
 .hentry footer .comments-link {
   margin-right: 18px;
 }
-.grid-post {
+.entry-content {
+  font-family: "ariallight", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 0.9em;
+  line-height: 1.48em;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+.posts {
+  clear: both;
+}
+.posts.popular.well {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.posts .grid-post {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -8374,71 +8389,71 @@ h6,
   margin-bottom: 1.7em;
 }
 @media (min-width: 768px) {
-  .grid-post {
+  .posts .grid-post {
     float: left;
     width: 50%;
   }
 }
 @media (min-width: 1200px) {
-  .grid-post {
+  .posts .grid-post {
     float: left;
     width: 33.33333333%;
   }
 }
-.grid-post .grid-post-img {
+.posts .grid-post .grid-post-img {
   height: 233px;
   overflow: hidden;
 }
-.grid-post .grid-post-img img {
+.posts .grid-post .grid-post-img img {
   width: 100%;
 }
-.grid-post .grid-post-img img:hover {
+.posts .grid-post .grid-post-img img:hover {
   opacity: 0.9;
 }
-.grid-post .entry-title {
+.posts .grid-post .entry-title {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.13em;
   line-height: 1.3em;
   margin: 0.7em 0 0.9em 0;
 }
-.grid-post .entry-content {
-  font-family: "ariallight", Arial, "Helvetica Neue", Helvetica, sans-serif;
+.posts .grid-post .entry-content {
+  font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.9em;
   line-height: 1.48em;
   font-weight: 300;
   word-wrap: break-word;
 }
-.grid-post .byline {
+.posts .grid-post .byline {
   font-size: 0.7em;
   line-height: 1.58em;
   margin-bottom: 1em;
   color: #494949;
 }
-.grid-post .byline img {
+.posts .grid-post .byline img {
   display: none;
 }
-.grid-post .byline a {
+.posts .grid-post .byline a {
   text-transform: uppercase;
   color: #494949;
   border-bottom: none;
 }
-.grid-post .byline a:hover {
+.posts .grid-post .byline a:hover {
   color: #494949;
   border-bottom: none;
 }
 @media (min-width: 768px) {
-  .grid-post {
+  .posts .grid-post {
     margin-bottom: 1.4em;
   }
-  .grid-post:nth-child(odd) {
+  .posts .grid-post:nth-child(odd) {
     clear: left;
   }
 }
 @media (min-width: 1200px) {
-  .grid-post:nth-child(odd) {
+  .posts .grid-post:nth-child(odd) {
     clear: none;
   }
-  .grid-post:nth-child(3n+1) {
+  .posts .grid-post:nth-child(3n+1) {
     clear: left;
   }
 }
