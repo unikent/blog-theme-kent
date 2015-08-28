@@ -146,7 +146,8 @@ module.exports = function(grunt) {
 
   // Register tasks
   grunt.registerTask('default', [
-    'dev'
+    'dev',
+    'build'
   ]);
   grunt.registerTask('dev', [
     'jshint',

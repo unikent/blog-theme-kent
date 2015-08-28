@@ -108,70 +108,82 @@
 }
 
 
-.grid-post{
-  .make-sm-column(6,30px);
-  .make-lg-column(4,30px);
+.posts{
+  clear: both;
+  &.popular.well{
+    border: none;
+    box-shadow: none;
+  }
+  h2{
+    width: 100%;
+    clear: both;
+    float: left;
+  }
+  .grid-post{
+    .make-sm-column(6,30px);
+    .make-lg-column(4,30px);
 
-  margin-bottom: 1.7em;
+    margin-bottom: 1.7em;
 
-  .grid-post-img{
-    height: 233px;
-    overflow:hidden;
-    img{
-      width: 100%;
-      &:hover{
-        opacity:0.9;
+    .grid-post-img{
+      height: 233px;
+      overflow:hidden;
+      img{
+        width: 100%;
+        &:hover{
+          opacity:0.9;
+        }
       }
     }
-  }
-  .entry-title{
-    font-family: @font-family-sans-serif;
-    font-size: 1.13em;
-    line-height: 1.3em;
-    margin: 0.7em 0 0.9em 0;
-  }
-  .entry-content{
-    font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 0.9em;
-    line-height: 1.48em;
-    font-weight: 300;
-    word-wrap: break-word;
-  }
-
-  .byline{
-    font-size: 0.7em;
-    line-height: 1.58em;
-    margin-bottom: 1em;
-    color: #494949;
-    img{
-      display: none;
+    .entry-title{
+      font-family: @font-family-sans-serif;
+      font-size: 1.13em;
+      line-height: 1.3em;
+      margin: 0.7em 0 0.9em 0;
     }
-    a{
-      text-transform: uppercase;
+    .entry-content{
+      font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 0.9em;
+      line-height: 1.48em;
+      font-weight: 300;
+      word-wrap: break-word;
+    }
+
+    .byline{
+      font-size: 0.7em;
+      line-height: 1.58em;
+      margin-bottom: 1em;
       color: #494949;
-      border-bottom: none;
-      &:hover{
+      img{
+        display: none;
+      }
+      a{
+        text-transform: uppercase;
         color: #494949;
         border-bottom: none;
+        &:hover{
+          color: #494949;
+          border-bottom: none;
+        }
       }
     }
-  }
 
-  @media (min-width: @screen-sm-min) {
-    margin-bottom: 1.4em;
-    &:nth-child(odd){
-      clear:left;
+    @media (min-width: @screen-sm-min) {
+      margin-bottom: 1.4em;
+      &:nth-child(odd){
+        clear:left;
+      }
     }
-  }
-  @media (min-width: @screen-lg-min) {
-    &:nth-child(odd){
-      clear:none;
+    @media (min-width: @screen-lg-min) {
+      &:nth-child(odd){
+        clear:none;
+      }
+      &:nth-child(3n+1){
+        clear:left;
+      }
     }
-    &:nth-child(3n+1){
-      clear:left;
-    }
-  }
 
+  }
 }
 
 .sidebar-primary{
