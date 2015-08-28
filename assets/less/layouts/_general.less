@@ -2,6 +2,10 @@ html{
   font-size: @font-size-base;
 }
 
+b,strong{
+  font-weight: 600;
+}
+
 body,
 button,
 input,
@@ -29,11 +33,52 @@ table {
 }
 
 blockquote{
-  font-family: @headings-font-family;
-  font-style: italic;
-  font-size: 1.13em;
-  line-height: 1.392;
-  margin: 1.3em 0.2em 1.4em 0.2em;
+  border-left: none;
+  margin: 2.3em 0.2em 2.4em;
+  padding: 15px 30px;
+  p:first-child{
+    font-family: @headings-font-family;
+    color: @brand-primary;
+    font-style: italic;
+    font-size: 1.1em;
+    line-height: 1.392;
+    margin-bottom: 0.4em;
+  }
+  p:nth-child(2){
+    font-family: @font-family-sans-serif;
+    font-weight: bold;
+    margin: 0;
+    font-size: 0.9em;
+  }
+  p:nth-child(3){
+    margin: 0;
+    font-size: 0.9em;
+  }
+}
+
+blockquote.pullquote {
+  border-left: 5px solid #e8ebf2;
+  p, ul li{
+    font-family: @headings-font-family;
+    color: @brand-primary;
+    font-size: @font-size-base;
+    font-weight: normal;
+    margin-bottom: 1.7em;
+    @media (min-width: @screen-sm-min) {
+      margin-bottom: 1.4em;
+      font-size: 0.895em !important;
+    }
+    @media (min-width: @screen-md-min) {
+      margin-bottom: 1.5em;
+      font-size: 1em;
+    }
+  }
+  ul li{
+    margin-bottom: 0;
+  }
+  p:last-child{
+      margin-bottom: 0;
+  }
 }
 
 pre{
@@ -137,7 +182,7 @@ h6,.h6{
     margin-bottom: 0.6em;
   }
   h3,.h3{
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.362em;
     margin-top: 0;
     margin-bottom: 0;
@@ -192,7 +237,7 @@ h6,.h6{
     margin-bottom: 0.55em;
   }
   h3,.h3{
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 1.152em;
     margin-top: 0;
     margin-bottom: 0;
