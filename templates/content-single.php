@@ -27,14 +27,6 @@
     }
     ?>
     <div class="entry-content">
-      <?php
-      $intro = get_post_meta($post->ID, 'IntroText',true);
-      if(!empty($intro)){
-        ?>
-        <p class="lead"><?php echo $intro; ?></p>
-        <?php
-      }
-      ?>
       <?php the_content(); ?>
     </div>
     <footer>

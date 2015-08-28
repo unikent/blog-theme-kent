@@ -228,6 +228,17 @@ function kentblogs_introtext_scripts(){
 }
 add_action('admin_head', 'kentblogs_introtext_scripts');
 
+
+function kentblogs_insert_introtext($html){
+    global $post;
+    $intro = get_post_meta($post->ID, 'IntroText',true);
+    if(!empty($intro)){
+      return '<p class="lead">' . $intro . '</p>' . $html;
+    }
+    return $html;
+}
+add_filter('the_content', 'kentblogs_insert_introtext',9);
+
 function get_image_attribution($id){
     $meta = get_post_meta($id);
     $meta = array_map(function($i){
