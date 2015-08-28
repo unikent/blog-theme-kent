@@ -8214,7 +8214,7 @@ h6,
   right: 0;
   font-size: 0.8em;
   padding: 0.1em 0.75em 0.1em 0.75em;
-  height: 27px;
+  height: 30px;
   font-family: "ariallight", Arial, "Helvetica Neue", Helvetica, sans-serif;
   cursor: pointer;
 }
@@ -8224,7 +8224,6 @@ h6,
   margin-top: 5px;
 }
 .hentry .entry-featured .attribution span {
-  padding-top: 1px;
   -webkit-transition: max-width 300ms;
        -o-transition: max-width 300ms;
           transition: max-width 300ms;
