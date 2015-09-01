@@ -13,16 +13,28 @@
     </header>
     <?php $fid = get_post_thumbnail_id();
     if(!empty($fid)){
+      $attribution = get_image_attribution($fid);
       $fsrc = wp_get_attachment_image_src($fid,'large',false);
       $fsrc = $fsrc[0];
       ?>
       <div class="entry-featured">
         <img src="<?php echo $fsrc; ?>" class="featured-img">
+        <?php if(!empty($attribution)){ ?>
+        <div class="attribution"><i class="kf-camera"></i><span>&nbsp;&nbsp;<?php echo $attribution; ?></span></div>
+        <?php } ?>
       </div>
     <?php
     }
     ?>
     <div class="entry-content">
+      <?php
+      $intro = get_post_meta($post->ID, 'IntroText',true);
+      if(!empty($intro)){
+        ?>
+        <p class="lead"><?php echo $intro; ?></p>
+        <?php
+      }
+      ?>
       <?php the_content(); ?>
     </div>
     <footer>
