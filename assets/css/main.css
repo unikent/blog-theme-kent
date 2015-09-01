@@ -8366,13 +8366,6 @@ h6,
 .hentry footer .comments-link {
   margin-right: 18px;
 }
-.entry-content {
-  font-family: "ariallight", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 0.9em;
-  line-height: 1.48em;
-  font-weight: 300;
-  word-wrap: break-word;
-}
 .grid-post {
   position: relative;
   min-height: 1px;
@@ -8409,7 +8402,7 @@ h6,
   margin: 0.7em 0 0.9em 0;
 }
 .grid-post .entry-content {
-  font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "ariallight", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 0.9em;
   line-height: 1.48em;
   font-weight: 300;
