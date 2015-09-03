@@ -246,8 +246,8 @@ function get_image_attribution($id){
     },$meta);
 
     $out='';
-    $title = get_post($id)->post_title;
-    if(empty(trim($title))){
+    $title = trim(get_post($id)->post_title);
+    if(empty($title)){
         $title = 'Picture';
     }else{
         $title = '"' . $title .'"';
