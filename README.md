@@ -2,7 +2,7 @@
 A new responsive, on-brand theme for WordPress blogs at blogs.kent.ac.uk
 
 ## Usage
-The Kent Blog Theme is free and distributed under the GNU GPL version 2 or later. This repository contains the license, which is also available from the [GNU website](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
+The Kent Blog Theme is free and distributed under the GNU GPL version 2 or later. This repository contains the license, which is also available from the [GNU website](http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html). Please refer to the current [brand guidelines](https://www.kent.ac.uk/brand) for use of the existing brand.
 
 ## Installing
 Download and install to the your themes folder within wp-content.
