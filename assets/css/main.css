@@ -6670,76 +6670,9 @@ button.close {
   font-weight: normal;
   font-style: normal;
 }
-[class^="kf-"]:before,
-[class*=" kf-"]:before {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-  text-transform: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.kf-book,
-.kf-chevron-down,
-.kf-chevron-left,
-.kf-chevron-right,
-.kf-chevron-up,
-.kf-circle,
-.kf-creative-commons,
-.kf-email,
-.kf-facebook,
-.kf-kent-block,
-.kf-kent-horizontal,
-.kf-kent-ke,
-.kf-library-search,
-.kf-location,
-.kf-moodle,
-.kf-pin,
-.kf-sds,
-.kf-search,
-.kf-spinner,
-.kf-square,
-.kf-timetables,
-.kf-twitter,
-.kf-user,
-.kf-wheelchair,
-.kf-angle-down,
-.kf-angle-left,
-.kf-angle-right,
-.kf-angle-up,
-.kf-camera,
-.kf-caret-down,
-.kf-caret-left,
-.kf-caret-right,
-.kf-caret-up,
-.kf-check,
-.kf-close,
-.kf-exclamation-circle,
-.kf-external-link,
-.kf-google-plus,
-.kf-heart-o,
-.kf-heart,
-.kf-home,
-.kf-info-circle,
-.kf-linkedin,
-.kf-list,
-.kf-menu,
-.kf-minus,
-.kf-pause,
-.kf-play,
-.kf-plus,
-.kf-sort-asc,
-.kf-sort-desc,
-.kf-star-o,
-.kf-star,
-.kf-volume-high,
-.kf-volume-low,
-.kf-volume-medium,
-.kf-volume-mute {
+.kf,
+[class^="kf-"],
+[class*=" kf-"] {
   display: inline-block;
   -webkit-font-feature-settings: normal;
           font-feature-settings: normal;
@@ -6761,68 +6694,20 @@ button.close {
        -o-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
 }
-.kf-book:before,
-.kf-chevron-down:before,
-.kf-chevron-left:before,
-.kf-chevron-right:before,
-.kf-chevron-up:before,
-.kf-circle:before,
-.kf-creative-commons:before,
-.kf-email:before,
-.kf-facebook:before,
-.kf-kent-block:before,
-.kf-kent-horizontal:before,
-.kf-kent-ke:before,
-.kf-library-search:before,
-.kf-location:before,
-.kf-moodle:before,
-.kf-pin:before,
-.kf-sds:before,
-.kf-search:before,
-.kf-spinner:before,
-.kf-square:before,
-.kf-timetables:before,
-.kf-twitter:before,
-.kf-user:before,
-.kf-wheelchair:before,
-.kf-angle-down:before,
-.kf-angle-left:before,
-.kf-angle-right:before,
-.kf-angle-up:before,
-.kf-camera:before,
-.kf-caret-down:before,
-.kf-caret-left:before,
-.kf-caret-right:before,
-.kf-caret-up:before,
-.kf-check:before,
-.kf-close:before,
-.kf-exclamation-circle:before,
-.kf-external-link:before,
-.kf-google-plus:before,
-.kf-heart-o:before,
-.kf-heart:before,
-.kf-home:before,
-.kf-info-circle:before,
-.kf-linkedin:before,
-.kf-list:before,
-.kf-menu:before,
-.kf-minus:before,
-.kf-pause:before,
-.kf-play:before,
-.kf-plus:before,
-.kf-sort-asc:before,
-.kf-sort-desc:before,
-.kf-star-o:before,
-.kf-star:before,
-.kf-volume-high:before,
-.kf-volume-low:before,
-.kf-volume-medium:before,
-.kf-volume-mute:before {
+.kf:before,
+[class^="kf-"]:before,
+[class*=" kf-"]:before {
   font-family: "kentfont";
   display: inline-block;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
+  vertical-align: middle;
+  line-height: 1;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .kf-book:before {
   content: "\f02d";
@@ -6860,11 +6745,20 @@ button.close {
 .kf-kent-ke:before {
   content: "\e003";
 }
+.kf-kent-vision:before {
+  content: "\e006";
+}
+.kf-krimson:before {
+  content: "\e00c";
+}
 .kf-library-search:before {
   content: "\f0ac";
 }
 .kf-location:before {
   content: "\f124";
+}
+.kf-lock:before {
+  content: "\f023";
 }
 .kf-moodle:before {
   content: "\e004";
@@ -6885,7 +6779,7 @@ button.close {
   content: "\f04d";
 }
 .kf-timetables:before {
-  content: "\f073";
+  content: "\e007";
 }
 .kf-twitter:before {
   content: "\f099";
@@ -6895,6 +6789,9 @@ button.close {
 }
 .kf-wheelchair:before {
   content: "\f193";
+}
+.kf-academia-edu:before {
+  content: "\e010";
 }
 .kf-angle-down:before {
   content: "\f107";
@@ -6908,8 +6805,23 @@ button.close {
 .kf-angle-up:before {
   content: "\f106";
 }
+.kf-backward:before {
+  content: "\f04a";
+}
+.kf-ban:before {
+  content: "\f05e";
+}
+.kf-calendar:before {
+  content: "\f073";
+}
 .kf-camera:before {
   content: "\f030";
+}
+.kf-captions-off:before {
+  content: "\e00e";
+}
+.kf-captions:before {
+  content: "\e00d";
 }
 .kf-caret-down:before {
   content: "\f0d7";
@@ -6923,17 +6835,65 @@ button.close {
 .kf-caret-up:before {
   content: "\f0d8";
 }
+.kf-check-circle:before {
+  content: "\f05d";
+}
 .kf-check:before {
   content: "\f00c";
+}
+.kf-chevron-down-square:before {
+  content: "\e00b";
+}
+.kf-chevron-left-square:before {
+  content: "\e008";
+}
+.kf-chevron-right-square:before {
+  content: "\e009";
+}
+.kf-chevron-up-square:before {
+  content: "\e00a";
+}
+.kf-clock:before {
+  content: "\f017";
+}
+.kf-close-circle:before {
+  content: "\f101";
 }
 .kf-close:before {
   content: "\f00d";
 }
+.kf-cog:before {
+  content: "\f013";
+}
+.kf-comment:before {
+  content: "\f075";
+}
+.kf-compress:before {
+  content: "\f066";
+}
+.kf-email-o:before {
+  content: "\f003";
+}
 .kf-exclamation-circle:before {
   content: "\f06a";
 }
+.kf-expand:before {
+  content: "\f065";
+}
 .kf-external-link:before {
   content: "\f08e";
+}
+.kf-file-text:before {
+  content: "\f0f6";
+}
+.kf-flickr:before {
+  content: "\f16e";
+}
+.kf-forward:before {
+  content: "\f102";
+}
+.kf-frown:before {
+  content: "\f119";
 }
 .kf-google-plus:before {
   content: "\f0d5";
@@ -6950,11 +6910,20 @@ button.close {
 .kf-info-circle:before {
   content: "\f05a";
 }
+.kf-instagram:before {
+  content: "\f16d";
+}
 .kf-linkedin:before {
   content: "\f0e1";
 }
 .kf-list:before {
   content: "\f03a";
+}
+.kf-meh:before {
+  content: "\f11a";
+}
+.kf-mendeley:before {
+  content: "\e00f";
 }
 .kf-menu:before {
   content: "\f0c9";
@@ -6965,11 +6934,29 @@ button.close {
 .kf-pause:before {
   content: "\f04c";
 }
+.kf-phone:before {
+  content: "\f095";
+}
+.kf-pinterest:before {
+  content: "\f0d2";
+}
+.kf-play-circle:before {
+  content: "\f144";
+}
 .kf-play:before {
   content: "\f04b";
 }
 .kf-plus:before {
   content: "\f067";
+}
+.kf-question-circle:before {
+  content: "\f059";
+}
+.kf-rss:before {
+  content: "\f09e";
+}
+.kf-smile:before {
+  content: "\f118";
 }
 .kf-sort-asc:before {
   content: "\f0de";
@@ -6977,11 +6964,35 @@ button.close {
 .kf-sort-desc:before {
   content: "\f0dd";
 }
+.kf-sort:before {
+  content: "\f0dc";
+}
+.kf-soundcloud:before {
+  content: "\f1be";
+}
 .kf-star-o:before {
   content: "\f006";
 }
 .kf-star:before {
   content: "\f005";
+}
+.kf-step-backward:before {
+  content: "\f048";
+}
+.kf-step-forward:before {
+  content: "\f051";
+}
+.kf-trophy:before {
+  content: "\f091";
+}
+.kf-tumblr:before {
+  content: "\f173";
+}
+.kf-undo:before {
+  content: "\f0e2";
+}
+.kf-users:before {
+  content: "\f0c0";
 }
 .kf-volume-high:before {
   content: "\f028";
@@ -6994,6 +7005,15 @@ button.close {
 }
 .kf-volume-mute:before {
   content: "\f026";
+}
+.kf-weibo:before {
+  content: "\f18a";
+}
+.kf-wifi:before {
+  content: "\f103";
+}
+.kf-youtube:before {
+  content: "\f167";
 }
 .kf-fw {
   width: 1.28571429em;
@@ -7057,6 +7077,9 @@ button.close {
 }
 .kf-inverse {
   color: #fff;
+}
+.kf-stack-lock {
+  bottom: -9px;
 }
 .kf-spin {
   -webkit-animation: kf-spin 2s infinite linear;
@@ -7804,26 +7827,6 @@ h6,
 }
 .banner .blog-header .nav-menu-toggle {
   display: none !important;
-  display: inline-block;
-  -webkit-font-feature-settings: normal;
-          font-feature-settings: normal;
-  -webkit-font-kerning: auto;
-          font-kerning: auto;
-  -webkit-font-language-override: normal;
-          font-language-override: normal;
-  font-size: inherit;
-  font-size-adjust: none;
-  font-stretch: normal;
-  font-style: normal;
-  font-synthesis: weight style;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  text-rendering: auto;
-  -webkit-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
-       -o-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
   position: absolute;
   right: 0;
   bottom: 0;
@@ -7847,44 +7850,10 @@ h6,
   }
 }
 .banner .blog-header .nav-menu-toggle:before {
-  font-family: "kentfont";
-  display: inline-block;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
-}
-.banner .blog-header .nav-menu-toggle:before {
   content: "\f078";
 }
 .banner .blog-header .nav-menu-toggle.open {
-  display: inline-block;
-  -webkit-font-feature-settings: normal;
-          font-feature-settings: normal;
-  -webkit-font-kerning: auto;
-          font-kerning: auto;
-  -webkit-font-language-override: normal;
-          font-language-override: normal;
-  font-size: inherit;
-  font-size-adjust: none;
-  font-stretch: normal;
-  font-style: normal;
-  font-synthesis: weight style;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  text-rendering: auto;
-  -webkit-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
-       -o-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
   font-size: 28px;
-}
-.banner .blog-header .nav-menu-toggle.open:before {
-  font-family: "kentfont";
-  display: inline-block;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
 }
 .banner .blog-header .nav-menu-toggle.open:before {
   content: "\f077";
@@ -8027,26 +7996,6 @@ h6,
   padding-left: 5px;
 }
 .sidebar .widget ul li {
-  display: inline-block;
-  -webkit-font-feature-settings: normal;
-          font-feature-settings: normal;
-  -webkit-font-kerning: auto;
-          font-kerning: auto;
-  -webkit-font-language-override: normal;
-          font-language-override: normal;
-  font-size: inherit;
-  font-size-adjust: none;
-  font-stretch: normal;
-  font-style: normal;
-  font-synthesis: weight style;
-  font-variant: normal;
-  font-weight: normal;
-  line-height: 1;
-  text-rendering: auto;
-  -webkit-transform: translate(0px, 0px);
-      -ms-transform: translate(0px, 0px);
-       -o-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
   line-height: 1.5em;
   padding-left: 20px;
   position: relative;
@@ -8054,22 +8003,24 @@ h6,
   display: block;
 }
 .sidebar .widget ul li:before {
+  content: "\f04d";
+}
+.sidebar .widget ul li:before {
   font-family: "kentfont";
   display: inline-block;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
-}
-.sidebar .widget ul li:before {
-  content: "\f04d";
-}
-.sidebar .widget ul li:before {
+  vertical-align: middle;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: #05345c;
   font-size: 0.29em;
   left: 4px;
   margin-right: 14px;
   position: absolute;
-  top: 3px;
 }
 .sidebar .widget_recent_entries ul {
   padding: 0;
@@ -8145,23 +8096,31 @@ h6,
   line-height: inherit;
   font-weight: inherit;
 }
+.page .main ul li.pull-left {
+  margin-right: .3em;
+}
+.page .main ul li.pull-right {
+  margin-left: .3em;
+}
+.page .main ul li:before {
+  content: "\f04d";
+}
 .page .main ul li:before {
   font-family: "kentfont";
   display: inline-block;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
-}
-.page .main ul li:before {
-  content: "\f04d";
-}
-.page .main ul li:before {
+  vertical-align: middle;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: #05345c;
   font-size: 0.29em;
   left: 4px;
   margin-right: 14px;
   position: absolute;
-  top: 14px;
 }
 .page .main .sd-social ul,
 .page .main .sd-sharing ul {
@@ -8336,13 +8295,13 @@ h6,
   line-height: inherit;
   font-weight: inherit;
 }
-.hentry .entry-content ul li:before,
-.hentry .entry-summary ul li:before {
-  font-family: "kentfont";
-  display: inline-block;
-  font-weight: normal;
-  font-style: normal;
-  text-decoration: inherit;
+.hentry .entry-content ul li.pull-left,
+.hentry .entry-summary ul li.pull-left {
+  margin-right: .3em;
+}
+.hentry .entry-content ul li.pull-right,
+.hentry .entry-summary ul li.pull-right {
+  margin-left: .3em;
 }
 .hentry .entry-content ul li:before,
 .hentry .entry-summary ul li:before {
@@ -8350,12 +8309,21 @@ h6,
 }
 .hentry .entry-content ul li:before,
 .hentry .entry-summary ul li:before {
+  font-family: "kentfont";
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  vertical-align: middle;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: #05345c;
   font-size: 0.29em;
   left: 4px;
   margin-right: 14px;
   position: absolute;
-  top: 0.5em;
 }
 .hentry .entry-content .sd-social ul,
 .hentry .entry-summary .sd-social ul,
